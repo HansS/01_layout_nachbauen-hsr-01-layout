@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout nachbauen - v0.2</title>
+        <style>
+            header, footer, nav, section, aside, footer {
+                padding: 15px;
+                box-sizing: border-box;
+            }
+            .flexbox {
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                overflow: hidden;
+            }
+            .flexbox nav, .flexbox aside {
+                flex: 1; /* 25% */
+            }
+            .flexbox section {
+                flex: 2; /* 50% */
+            }
+            header, footer {
+                background-color: yellow;
+                width: 100%;
+            }
+            nav {
+                background-color: aqua;
+                width: 25%;
+                float: left;
+            }
+            section {
+                background-color: #228b22;
+                width: 50%;
+                float: left;
+            }
+            aside {
+                background-color: #008b8b;
+                width: 25%;
+                float: left;
+            }
+            footer {
+                clear: left;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            Header
+        </header>
+        <div class="flexbox">
+            <nav>
+                Nav
+            </nav>
+            <section>
+                Content<br />
+                Bla
+            </section>
+            <aside>
+                Sidebar<br />
+            </aside>
+        </div>
+        <footer>
+            Footer
+        </footer>
+        <hr />
+        <p>
+            Julian Mollik
+        </p>
+    </body>
+</html>
